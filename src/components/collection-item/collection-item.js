@@ -1,7 +1,5 @@
-import { connect } from 'react-redux';
-
-import { addItem } from '../../redux/cart/cart.actions';
-
+import { useContext } from 'react';
+import { CartContext } from '../../contexts/cart-provider';
 import {
   CollectionItemContainer,
   CollectionFooterContainer,
@@ -11,8 +9,9 @@ import {
   PriceContainer,
 } from './collection-item.styles';
 
-const CollectionItem = ({ item, addItem }) => {
+const CollectionItem = ({ item }) => {
   const { name, price, imageUrl } = item;
+  const { addItem } = useContext(CartContext);
 
   return (
     <CollectionItemContainer>
@@ -28,8 +27,4 @@ const CollectionItem = ({ item, addItem }) => {
   );
 };
 
-const mapDispatchToProps = (dispatch) => ({
-  addItem: (item) => dispatch(addItem(item)),
-});
-
-export default connect(null, mapDispatchToProps)(CollectionItem);
+export default CollectionItem;

@@ -1,3 +1,5 @@
+import { createContext } from 'react';
+
 const SHOP_DATA = {
   hats: {
     id: 1,
@@ -246,4 +248,6 @@ const SHOP_DATA = {
   },
 };
 
-export default SHOP_DATA;
+const CollectionsContext = createContext(SHOP_DATA);
+
+export default CollectionsContext;
