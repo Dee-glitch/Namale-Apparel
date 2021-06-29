@@ -1,4 +1,4 @@
-import { useHistory } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import {
   MenuItemContainer,
   BackgroundImageContainer,
@@ -7,9 +7,7 @@ import {
   ContentSubtitle,
 } from './menu-item.styles';
 
-const MenuItem = ({ title, imageUrl, size, linkUrl, match }) => {
-  const history = useHistory();
-
+const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => {
   return (
     <MenuItemContainer
       size={size}
@@ -27,4 +25,4 @@ const MenuItem = ({ title, imageUrl, size, linkUrl, match }) => {
   );
 };
 
-export default MenuItem;
+export default withRouter(MenuItem);
