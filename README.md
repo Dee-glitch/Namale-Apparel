@@ -6,6 +6,7 @@ A full stack e-commerce application built with React, React Hooks, using Firebas
 The app initially utilized redux for state management but now uses the context-API which serves the same purpose.
 
 What you can do: 
+* evrythng you can do tithe databases
 
 * Sign Up / Sign In using email address and password or google account.
 * Explore different categories.
